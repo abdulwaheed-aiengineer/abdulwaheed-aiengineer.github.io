@@ -2555,9 +2555,10 @@ section:first-of-type::before {
 .business-benefits,
 .recruiter-benefits {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
     margin-top: var(--spacing-2xl);
+    width: 100%;
 }
 
 .benefit-item {
@@ -2720,6 +2721,12 @@ section:first-of-type::before {
     
     .tech-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .business-benefits,
+    .recruiter-benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
     }
 }
 
