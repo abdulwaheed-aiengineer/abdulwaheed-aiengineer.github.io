@@ -34,6 +34,13 @@ function initNavigation() {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        
+        // Add/remove body class to prevent content overlap
+        if (navMenu.classList.contains('active')) {
+            document.body.classList.add('nav-open');
+        } else {
+            document.body.classList.remove('nav-open');
+        }
     });
 
     // Close mobile menu when clicking on links
@@ -41,6 +48,7 @@ function initNavigation() {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            document.body.classList.remove('nav-open');
         });
     });
 
