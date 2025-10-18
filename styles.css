@@ -1465,6 +1465,48 @@ section:first-of-type::before {
     letter-spacing: 0.05em;
 }
 
+.engagement-deliverables {
+    margin: 16px 0;
+    text-align: left;
+}
+
+.engagement-deliverables ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+
+.engagement-deliverables li {
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.engagement-deliverables li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.engagement-pricing {
+    margin: 12px 0;
+    padding: 12px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+.engagement-pricing strong {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
 /* Projects Section */
 .projects {
     background: var(--bg-secondary);
@@ -2447,6 +2489,8 @@ section:first-of-type::before {
 .author-info span {
     font-size: 0.9rem;
     color: var(--text-light);
+    display: block;
+    margin-bottom: 2px;
 }
 
 .notable-collaborations {
@@ -2469,6 +2513,90 @@ section:first-of-type::before {
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
+}
+
+/* For Businesses & Recruiters Sections */
+.businesses {
+    background: var(--bg-secondary);
+}
+
+.recruiters {
+    background: var(--bg-primary);
+}
+
+.businesses-content,
+.recruiters-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.businesses-text,
+.recruiters-text {
+    text-align: center;
+}
+
+.businesses-text h3,
+.recruiters-text h3 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.businesses-text p,
+.recruiters-text p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--text-secondary);
+}
+
+.business-benefits,
+.recruiter-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.benefit-item {
+    background: var(--bg-primary);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    text-align: left;
+}
+
+.benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.benefit-item h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.benefit-item h4 i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.benefit-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
 }
 
 /* Insights Section */
@@ -3695,6 +3823,23 @@ section:first-of-type::before {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--spacing-sm);
+    }
+
+    /* Businesses & Recruiters mobile */
+    .business-benefits,
+    .recruiter-benefits {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .benefit-item {
+        padding: var(--spacing-lg);
+    }
+
+    .benefit-item h4 {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        justify-content: flex-start;
     }
 }
 
